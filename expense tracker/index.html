@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <form id="transaction-form">
+        <input type="text" id="desc" placeholder="Description" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <select id="category">
+          <option value="" disabled selected>Category</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Bills">Bills</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Health">Health</option>
+        
+        </select>
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="date" id="date" required />
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary">
+      <div>Total Income: ₹<span id="income">0</span></div>
+      <div>Total Expenses: ₹<span id="expense">0</span></div>
+      <div>Net Balance: ₹<span id="balance">0</span></div>
+    </section>
+
+    <!-- Transaction List -->
+    <section>
+      <h2>All Transactions</h2>
+      <ul id="transaction-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
